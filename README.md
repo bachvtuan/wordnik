@@ -14,7 +14,7 @@ Golang client for WORDNIK API.
 + /words.json/wordOfTheDay  (DONE)
 + /words.json/reverseDictionary ( PENDING )
 + /words.json/randomWords  (DONE)
-+ /words.json/randomWords  (DONE)
++ /words.json/randomWord  (DONE)
 
 #### WordList
 + Pending all
