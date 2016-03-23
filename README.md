@@ -2,10 +2,13 @@
 Golang client for WORDNIK API.
 
 ## API Status:
+
 #### Account
-+ Pending
++ Pending all
+
 #### Word
-+ Pending
++ Pending all
+
 #### Words
 + /words.json/search/{query}  (DONE)
 + /words.json/wordOfTheDay  (DONE)
@@ -14,10 +17,10 @@ Golang client for WORDNIK API.
 + /words.json/randomWords  (DONE)
 
 #### WordList
-+ Pending
++ Pending all
 
 #### WordLists
-+ Pending
++ Pending all
 
 ## Example 
 Check out test/test.go or test/test_parallel.go .
