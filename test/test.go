@@ -1,29 +1,3 @@
-# wordnik
-Golang client for WORDNIK API.
-
-## API Status:
-#### Account
-+ Pending
-#### Word
-+ Pending
-#### Words
-+ /words.json/search/{query}  (DONE)
-+ /words.json/wordOfTheDay  (DONE)
-+ /words.json/reverseDictionary ( PENDING )
-+ /words.json/randomWords  (DONE)
-+ /words.json/randomWords  (DONE)
-
-#### WordList
-+ Pending
-
-#### WordLists
-+ Pending
-
-## Example 
-Check out test/test.go or test/test_parallel.go .
-
-This's the content fo test/test.go
-```
 package main 
 
 import (
@@ -89,4 +63,3 @@ func main() {
   end := time.Now()
   fmt.Printf("Executed time %v\n",  end.Sub(start))
 }
-```
