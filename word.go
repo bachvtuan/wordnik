@@ -4,7 +4,6 @@ import(
   "encoding/json"
   "errors"
   "strconv"
-  "fmt"
 )
 
 type WordService struct{
@@ -83,7 +82,6 @@ func ( exampleService *ExampleService ) Do() ( FullExample, error ) {
     return FullExample{}, err
   }
 
-  fmt.Println(response_text)
 
   b := []byte( response_text )
 
@@ -164,7 +162,6 @@ func ( definitionService *DefinitionService ) Do() ( []Definition, error ) {
     return []Definition{}, err
   }
 
-  fmt.Println(response_text)
 
   b := []byte( response_text )
 
@@ -210,6 +207,8 @@ type Definition struct{
   Word string `json:"word" bson:"word"`
   Sequence string `json:"sequence" bson:"sequence"`
   ExtendedText string `json:"extendedText" bson:"extendedText"`
+  PartOfSpeech string `json:"partOfSpeech" bson:"partOfSpeech"`
+  
   AttributionText string `json:"attributionText" bson:"attributionText"`
   Text string `json:"text" bson:"text"`
   Score float32 `json:"score" bson:"score"`
@@ -259,7 +258,6 @@ func ( relativedWordService *RelativedWordService ) Do() ( []RelativedWord, erro
     return []RelativedWord{}, err
   }
 
-  fmt.Println(response_text)
 
   b := []byte( response_text )
 
@@ -323,7 +321,6 @@ func ( pronunciationService *PronunciationService ) Do() ( []Pronunciation, erro
     return []Pronunciation{}, err
   }
 
-  fmt.Println(response_text)
 
   b := []byte( response_text )
 
@@ -382,7 +379,6 @@ func ( hyphenationService *HyphenationService ) Do() ( []Hyphenation, error ) {
     return []Hyphenation{}, err
   }
 
-  fmt.Println(response_text)
 
   b := []byte( response_text )
 
@@ -435,7 +431,6 @@ func ( audioService *AudioService ) Do() ( []Audio, error ) {
     return []Audio{}, err
   }
 
-  fmt.Println(response_text)
 
   b := []byte( response_text )
 
