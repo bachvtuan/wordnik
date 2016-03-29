@@ -24,8 +24,8 @@ func main() {
   c := make(chan string)
   count_done := 0
  
-  //workers are 7
-  for i:=0; i< 4;i++{
+  //workers are 10
+  for i:=0; i< 10;i++{
  
     go func ( c chan string ) {
  
@@ -70,9 +70,71 @@ func main() {
               }else{
                 fmt.Printf("Random words are %+v\n\n\n", randomWords)
               }
+            }else if action == "ExampleService"{
+              service.WordService.ExampleService.Word = "appropriate"
+              exampleResult, err := service.WordService.ExampleService.Do()
+              count_done = count_done + 1
+              if err != nil{
+                panic(err)
+              }else{
+                fmt.Printf("exampleResult is %+v\n\n\n", exampleResult)
+              }
+
+            }else if action == "DefinitionService"{
+
+              service.WordService.DefinitionService.Word = "appropriate"
+              definitions, err := service.WordService.DefinitionService.Do()
+              count_done = count_done + 1
+              if err != nil{
+                panic(err)
+              }else{
+                fmt.Printf("definitions is %+v\n\n\n", definitions)
+              }
+
+            }else if action == "RelativedWordService"{
+              service.WordService.RelativedWordService.Word = "appropriate"
+              relativedWords, err := service.WordService.RelativedWordService.Do()
+              count_done = count_done + 1
+              if err != nil{
+                panic(err)
+              }else{
+                fmt.Printf("relativedWords is %+v\n\n\n", relativedWords)
+              }
+
+            }else if action == "PronunciationService"{
+              service.WordService.PronunciationService.Word = "appropriate"
+              pronunciations, err := service.WordService.PronunciationService.Do()
+              count_done = count_done + 1
+              if err != nil{
+                panic(err)
+              }else{
+                fmt.Printf("pronunciations is %+v\n\n\n", pronunciations)
+              }
+            }else if action == "HyphenationService"{
+
+              service.WordService.HyphenationService.Word = "appropriate"
+              hyphenations, err := service.WordService.HyphenationService.Do()
+              count_done = count_done + 1
+              if err != nil{
+                panic(err)
+              }else{
+                fmt.Printf("hyphenations is %+v\n\n\n", hyphenations)
+              }
+            }else if action == "AudioService"{
+
+              service.WordService.AudioService.Word = "appropriate"
+              audios, err := service.WordService.AudioService.Do()
+              count_done = count_done + 1
+
+              if err != nil{
+                panic(err)
+              }else{
+                fmt.Printf("audios is %+v\n\n\n", audios)
+              }
             }
+
  
-            if count_done == 4{
+            if count_done == 10{
               end := time.Now()
               fmt.Printf("Executed time %v\n",  end.Sub(start))
               wg.Done()
@@ -89,6 +151,13 @@ func main() {
   c <- "Search"
   c <- "RandomWord"
   c <- "RandomWords"
+
+  c <- "ExampleService"
+  c <- "DefinitionService"
+  c <- "RelativedWordService"
+  c <- "PronunciationService"
+  c <- "HyphenationService"
+  c <- "AudioService"
 
   wg.Wait()
 

@@ -4,23 +4,33 @@ Golang client for WORDNIK API.
 ## API Status:
 
 #### Account
-+ Pending all
+- [ ]  Pending all
 
 #### Word
-+ Pending all
+- [ ]  Pending all
 
 #### Words
-+ /words.json/search/{query}  (DONE)
-+ /words.json/wordOfTheDay  (DONE)
-+ /words.json/reverseDictionary ( PENDING )
-+ /words.json/randomWords  (DONE)
-+ /words.json/randomWord  (DONE)
+- [x] /words.json/search/{query}  
+- [x] /words.json/wordOfTheDay  
+- [ ] /words.json/reverseDictionary 
+- [x] /words.json/randomWords  
+- [x] /words.json/randomWord  
 
 #### WordList
-+ Pending all
+- [x] /word.json/{word}/examples
+- [ ] /word.json/{word}
+- [x] /word.json/{word}/definitions
+- [ ] /word.json/{word}/topExample
+- [x] /word.json/{word}/relatedWords
+- [x] /word.json/{word}/pronunciations
+- [x] /word.json/{word}/hyphenation
+- [ ] /word.json/{word}/frequency
+- [ ] /word.json/{word}/phrases
+- [ ] /word.json/{word}/etymologies
+- [x]  /word.json/{word}/audio
 
 #### WordLists
-+ Pending all
+- [ ]  Pending all
 
 ## Example 
 Check out test/test.go or test/test_parallel.go .

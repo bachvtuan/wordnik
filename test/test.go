@@ -60,6 +60,67 @@ func main() {
     fmt.Printf("Random word is %+v\n\n\n", randomWord)
   }
 
+  /**
+   * Word service section
+   */
+  service.WordService.ExampleService.Word = "appropriate"
+  exampleResult, err := service.WordService.ExampleService.Do()
+
+  if err != nil{
+    panic(err)
+  }else{
+    fmt.Printf("exampleResult is %+v\n\n\n", exampleResult)
+  }
+
+
+  
+  service.WordService.DefinitionService.Word = "appropriate"
+  definitions, err := service.WordService.DefinitionService.Do()
+
+  if err != nil{
+    panic(err)
+  }else{
+    fmt.Printf("definitions is %+v\n\n\n", definitions)
+  }
+
+  service.WordService.RelativedWordService.Word = "appropriate"
+  relativedWords, err := service.WordService.RelativedWordService.Do()
+
+  if err != nil{
+    panic(err)
+  }else{
+    fmt.Printf("relativedWords is %+v\n\n\n", relativedWords)
+  }
+  
+  service.WordService.PronunciationService.Word = "appropriate"
+  pronunciations, err := service.WordService.PronunciationService.Do()
+
+  if err != nil{
+    panic(err)
+  }else{
+    fmt.Printf("pronunciations is %+v\n\n\n", pronunciations)
+  }
+
+
+  service.WordService.HyphenationService.Word = "appropriate"
+  hyphenations, err := service.WordService.HyphenationService.Do()
+
+  if err != nil{
+    panic(err)
+  }else{
+    fmt.Printf("hyphenations is %+v\n\n\n", hyphenations)
+  }
+
+  service.WordService.AudioService.Word = "appropriate"
+  audios, err := service.WordService.AudioService.Do()
+
+  if err != nil{
+    panic(err)
+  }else{
+    fmt.Printf("audios is %+v\n\n\n", audios)
+  }
+
+
   end := time.Now()
   fmt.Printf("Executed time %v\n",  end.Sub(start))
 }
